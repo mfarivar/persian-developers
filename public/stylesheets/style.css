@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "ArialRounded";
+  font-display: swap;
+  src: url("/fonts/Arial_Rounded_MT.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ArialRounded";
+  font-display: swap;
+  src: url("/fonts/Arial-Rounded-MT-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+:root {
+  --first-color: hsl(2, 66%, 58%);
+  --second-color: hsl(182, 35%, 42%);
+  --light-color: hsl(4, 0%, 93%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "ArialRounded", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+body.pomodoro {
+  background-color: var(--first-color);
+}
+
+body.break {
+  background-color: var(--second-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem;
+  border-radius: 0.5rem;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  background-color: var(--light-color);
+}
+
+#menu> * {
+  height: 80%;
+  margin: 1rem;
+  transition: 0.2s;
+}
+
+#menu> a> img {
+  height: 100%;
+}
+
+#menu> *:hover {
+  height: 100%;
+  cursor: pointer;
+}
+
+#clubhouse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-color);
+  height: 5rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  padding: 1rem;
+  border-radius: 5rem;
+}
+
+#clubhouse> a> img {
+  height: 100%;
+}
+
+#clubhouse> a {
+  height: 90%;
+  transition: 0.2s;
+}
+
+#clubhouse> a:hover {
+  height: 100%;
+}
+
+#title {
+  font-family: "ArialRounded", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+  font-size: 4rem;
+  color: var(--light-color);
+  text-align: center;
+}
+
+.timer {
+  font-size: 120px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--light-color);
+}
+
+#today {
+  background-color: var(--light-color);
+  color: var(--first-color);
+  padding: 1rem 3rem;
+  border-radius: 5rem;;
+  font-size: 200%;
+  font-weight: bolder;
+}
+
+#tomato> img {
+  width: 100%;
+}
+
+#tomato {
+  width: 10rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+@media only screen and (max-width: 680px) {
+  main {
+    height: 90%;
+    margin-top: -20%;
+  }
+  .timer {
+    font-size: 100px;
+    /* margin-top: -15rem; */
+  }
+  #menu {
+    position: static;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 2rem;
+  }
+  #clubhouse {
+    position: static;
+  }
+  #title {
+    font-size: 1.5rem;
+  }
+}
+
+.tomato {
+  visibility: visible;
+  background-color: var(--second-colors);
+  color: var(--first-color);
+  width: 10rem;
+  height: 10rem;
+  padding: 2rem;
+  border: 0;
+  margin: 0.2rem;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.tomato:hover {
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.tomato img {
+  width: 100%;
+}
+
+.hide {
+  overflow: hidden;
+  visibility: hidden;
+  display: none;
+}
+
+#among-us {
+  overflow: hidden;
+  visibility: hidden;
+  width: 10;
+  position: absolute;
+}
+
+.among-us-animation {
+  animation: among-us 1.5s;
+}
+
+@keyframes among-us {
+  0% {
+    visibility: visible;
+    width: 0;
+  }
+  90% {
+    width: 50%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.tomato {
+  display: none;
+}

@@ -1,0 +1,15 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "autoload",
+    "autosave",
+    "gmail",
+    "lokijs",
+    "pomodoro",
+    "pomodoros",
+    "truetype"
+  ]
+}
